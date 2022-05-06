@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 
 const Login = () => {
@@ -17,6 +19,9 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      const [sendPasswordResetEmail] = useSendPasswordResetEmail(
+        auth
+      );
 
     const handleBlurEmail = event=>{
         setEmail(event.target.value);
@@ -29,6 +34,21 @@ const handleForm =event=>{
     event.preventDefault();
     signInWithEmailAndPassword(email,password);
     
+}
+const resetPassword =(event)=>{
+    setEmail(event.target.value);
+    
+    if(email){
+        sendPasswordResetEmail(email);
+        toast('sent email');
+
+    }
+    else{
+        
+            toast ('please enter your email address')
+    
+    }
+
 }
 
 
@@ -60,7 +80,8 @@ const handleForm =event=>{
            </form>
            {errorMessage}
            <p>New to Fruits store? <Link to='/register' className='text-danger  text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
-            <p>Forget password? <button className='text-info btn btn-link  text-decoration-none' >Reset Password</button></p>
+            <p>Forget password? <button className='text-info btn btn-link  text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
+            <ToastContainer/>
         </div>
     );
 };
