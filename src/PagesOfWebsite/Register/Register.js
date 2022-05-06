@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword,useUpdateProfile  } from 'react-firebase-hooks/auth';
 import './Register.css';
 
 const Register = () => {
+    const[name,setName]=useState('')
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
     const [
@@ -12,7 +13,11 @@ const Register = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
+      const [updateProfile] = useUpdateProfile(auth);
+    const handleBlurName = event=>{
+        setName(event.target.value);
+    }
     const handleBlurEmail = event=>{
         setEmail(event.target.value);
     }
@@ -29,8 +34,9 @@ const Register = () => {
         
         createUserWithEmailAndPassword(email,password);
         event.preventDefault();
-        setEmail('');
-        setPassword('')
+        updateProfile({ displayName:name });
+         console.log('updating profile')
+        
         navigate('/home')
     }
     if(user){
@@ -40,7 +46,7 @@ const Register = () => {
     if (error ) {
         errorMessage=
           <div>
-            <p className='text-danger'>Error: {error.message}</p>
+            <p className='text-danger'>ErrorMessage: {error.message}</p>
           </div>
         
       }
@@ -51,12 +57,12 @@ const Register = () => {
                <h1 className='text-center text-primary'>Please Register</h1>
 
                <label className='fw-blod' htmlFor="username">UserName</label> <br />
-               <input type="text" name='username' placeholder='UserName'  /> <br />
+               <input onBlur={handleBlurName} type="text" name='username' placeholder='UserName' required /> <br />
 
                <label  htmlFor="email">Email</label> <br />
-               <input type="email" name="email" id="" placeholder='Email'onChange={handleBlurEmail} required /> <br />
+               <input type="email" name="email" id="" placeholder='Email'onBlur={handleBlurEmail} required /> <br />
                <label  htmlFor="password">Password</label> <br />
-               <input type="password"  name="password" id="" onChange={handleBlurPass} placeholder='Password' required/>
+               <input type="password"  name="password" id="" onBlur={handleBlurPass} placeholder='Password' required/>
                <input className='btn btn-primary' type="submit" value="Register" />
                
                
