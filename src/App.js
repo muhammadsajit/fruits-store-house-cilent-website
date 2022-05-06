@@ -8,6 +8,7 @@ import Blogs from './PagesOfWebsite/Blogs/Blogs';
 import Footer from './PagesOfWebsite/Home/Footer/Footer';
 import Header from './PagesOfWebsite/Home/Header/Header';
 import NotFound from './PagesOfWebsite/NotFound/NotFound';
+import Register from './PagesOfWebsite/Register/Register';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
       <Route path='/inventory' element={<InventoryItem></InventoryItem>}  ></Route>
+      <Route path='/register' element={<Register></Register>}></Route>
       <Route path='*' element={<NotFound></NotFound>}  ></Route>
     </Routes>
     <Footer></Footer>
