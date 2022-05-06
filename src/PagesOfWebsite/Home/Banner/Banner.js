@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import fruit1 from '../../../images/fruits1.png';
 import fruit2 from '../../../images/fruit2.png';
-import fruit3 from '../../../images/fruit3.png'
+import fruit3 from '../../../images/fruit3.png';
+import './Banner.css'
 
 const Banner = () => {
     const [index, setIndex] = useState(0);
@@ -11,7 +12,7 @@ const Banner = () => {
       setIndex(selectedIndex);
     };
     return (
-        <div>
+        <div className='banner'>
            
            <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
@@ -36,7 +37,7 @@ const Banner = () => {
 
         <Carousel.Caption>
           <h3>Fruits Store2</h3>
-          <p>Fruits store in refrigerator</p>
+          <p>Fruits preserved in refrigerator</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

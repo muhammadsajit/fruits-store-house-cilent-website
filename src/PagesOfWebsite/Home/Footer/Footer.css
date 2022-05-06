@@ -1,0 +1,17 @@
+.footer-container{
+    margin-top: 20px;
+}
+
+.footer{
+    background-color:black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    
+    padding: 3px;
+
+}
+.footer p{
+    margin: 0;
+}

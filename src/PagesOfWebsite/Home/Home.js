@@ -6,9 +6,10 @@ const Home = () => {
     return (
         <div>
             
-            <Header></Header>
+            
             <h2 className='text-center text-primary'>Fruits Store House</h2>
             <Banner></Banner>
+            
         </div>
     );
 };
