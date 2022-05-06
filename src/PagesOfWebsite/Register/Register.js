@@ -57,12 +57,12 @@ const Register = () => {
                <h1 className='text-center text-primary'>Please Register</h1>
 
                <label className='fw-blod' htmlFor="username">UserName</label> <br />
-               <input onBlur={handleBlurName} type="text" name='username' placeholder='UserName' required /> <br />
+               <input onBlur={handleBlurName} type="text"  name='username'  autoComplete='off' placeholder='UserName' required /> <br />
 
                <label  htmlFor="email">Email</label> <br />
-               <input type="email" name="email" id="" placeholder='Email'onBlur={handleBlurEmail} required /> <br />
+               <input type="email" name='email'  id="" placeholder='Email' autoComplete='off' onBlur={handleBlurEmail} required /> <br />
                <label  htmlFor="password">Password</label> <br />
-               <input type="password"  name="password" id="" onBlur={handleBlurPass} placeholder='Password' required/>
+               <input type="password" autoComplete='off'  name="password" id="" onBlur={handleBlurPass} placeholder='Password' required/>
                <input className='btn btn-primary' type="submit" value="Register" />
                
                
