@@ -10,6 +10,7 @@ import Header from './PagesOfWebsite/Home/Header/Header';
 import NotFound from './PagesOfWebsite/NotFound/NotFound';
 import Register from './PagesOfWebsite/Register/Register';
 import Contact from './PagesOfWebsite/Contact/Contact';
+import Quality from './PagesOfWebsite/Quality/Quality';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path='/login' element={<Login></Login>}></Route>
       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
       <Route path='/contact'element={<Contact></Contact>}></Route>
+      <Route path='/quality'element={<Quality></Quality>}></Route>
 
       <Route path='/inventory' element={<InventoryItem></InventoryItem>}  ></Route>
       <Route path='/register' element={<Register></Register>}></Route>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Loading from '../../commonPages/Loading/Loading';
 import Contact from '../Contact/Contact';
+import Quality from '../Quality/Quality';
 import Banner from './Banner/Banner';
 import Header from './Header/Header';
 import InventoryItem from './InventoryItem/InventoryItem';
@@ -20,6 +21,7 @@ const Home = () => {
            
             <Banner></Banner>
             <InventoryItem></InventoryItem>
+            <Quality></Quality>
             <Contact></Contact>
             
         </div>
