@@ -2,6 +2,7 @@ import React from 'react';
 import Loading from '../../commonPages/Loading/Loading';
 import Banner from './Banner/Banner';
 import Header from './Header/Header';
+import InventoryItem from './InventoryItem/InventoryItem';
 
 const Home = () => {
     let loading;
@@ -17,6 +18,7 @@ const Home = () => {
             <h2 className='text-center text-primary'>Fruits Store House</h2>
            
             <Banner></Banner>
+            <InventoryItem></InventoryItem>
             
         </div>
     );
