@@ -9,7 +9,7 @@ const SocialLogin = () => {
     const navigate=useNavigate()
    
     
-    
+   
     let errorMessage;
     if (error ) {
         errorMessage=

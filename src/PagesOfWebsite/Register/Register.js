@@ -4,11 +4,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword,useUpdateProfile  } from 'react-firebase-hooks/auth';
 import './Register.css';
 import SocialLogin from '../../commonPages/SocialLogin/SocialLogin';
+import Loading from '../../commonPages/Loading/Loading';
 
 const Register = () => {
     const[name,setName]=useState('')
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
+    const navigate =useNavigate();
     const [
         createUserWithEmailAndPassword,
         user,
@@ -25,12 +27,16 @@ const Register = () => {
     const handleBlurPass = event=>{
         setPassword(event.target.value);
     }
+    if(loading){
+        return <Loading></Loading>
+    }
 
 
-    const navigate=useNavigate();
+    
     const navigateLogin =()=>{
         navigate('/login')
     }
+    
     const handleForm=event=>{
         
         createUserWithEmailAndPassword(email,password);

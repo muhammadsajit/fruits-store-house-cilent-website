@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 import SocialLogin from '../../commonPages/SocialLogin/SocialLogin';
+import Loading from '../../commonPages/Loading/Loading';
 
 const Login = () => {
     const [email,setEmail]=useState('');
@@ -35,6 +36,9 @@ const handleForm =event=>{
     event.preventDefault();
     signInWithEmailAndPassword(email,password);
     
+}
+if(loading){
+    return <Loading></Loading>
 }
 const resetPassword =(event)=>{
     setEmail(event.target.value);
