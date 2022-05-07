@@ -5,6 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
+import SocialLogin from '../../commonPages/SocialLogin/SocialLogin';
 
 const Login = () => {
     const [email,setEmail]=useState('');
@@ -81,7 +82,9 @@ const resetPassword =(event)=>{
            {errorMessage}
            <p>New to Fruits store? <Link to='/register' className='text-danger  text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
             <p>Forget password? <button className='text-info btn btn-link  text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
+            <SocialLogin></SocialLogin>
             <ToastContainer/>
+
         </div>
     );
 };
