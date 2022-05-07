@@ -9,6 +9,7 @@ import Footer from './PagesOfWebsite/Home/Footer/Footer';
 import Header from './PagesOfWebsite/Home/Header/Header';
 import NotFound from './PagesOfWebsite/NotFound/NotFound';
 import Register from './PagesOfWebsite/Register/Register';
+import Contact from './PagesOfWebsite/Contact/Contact';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path='/home' element={<Home></Home>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+      <Route path='/contact'element={<Contact></Contact>}></Route>
 
       <Route path='/inventory' element={<InventoryItem></InventoryItem>}  ></Route>
       <Route path='/register' element={<Register></Register>}></Route>
