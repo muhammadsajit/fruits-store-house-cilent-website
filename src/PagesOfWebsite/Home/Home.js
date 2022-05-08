@@ -7,10 +7,7 @@ import Header from './Header/Header';
 import InventoryItem from './InventoryItem/InventoryItem';
 
 const Home = () => {
-    let loading;
-    if(loading){
-        return <Loading></Loading>
-    }
+   
 
     return (
         <div>
