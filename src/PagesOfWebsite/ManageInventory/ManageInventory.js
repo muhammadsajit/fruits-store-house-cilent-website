@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import SingleItem from '../SingleItem/SingleItem';
+import AllItem from '../AllItem/AllItem'
+
 
 const ManageInventory = () => {
     const [items,setItems]=useState([]);
@@ -18,9 +19,9 @@ const ManageInventory = () => {
             <h2 className='text-center text-primary mt-5'> Manage Inventory</h2>
             <div className='items-container'>
                 {
-                    items.map(item => <SingleItem
+                    items.map(item => <AllItem
                         key={item._id}
-                        item={item}></SingleItem>)
+                        item={item}></AllItem>)
                 }
             </div>
         </div>

@@ -14,6 +14,7 @@ import Quality from './PagesOfWebsite/Quality/Quality';
 import RequiredAuth from './PagesOfWebsite/RequiredAuth/RequiredAuth';
 import ItemDetail from './PagesOfWebsite/ItemDetail/ItemDetail';
 import ManageInventory from './PagesOfWebsite/ManageInventory/ManageInventory';
+import AddItem from './PagesOfWebsite/AddItem/AddItem';
 
 
 function App() {
@@ -28,8 +29,9 @@ function App() {
       <Route path='/contact'element={<Contact></Contact>}></Route>
       <Route path='/quality'element={<Quality></Quality>}></Route>
       <Route path='/manageInventory'element={<ManageInventory></ManageInventory>}></Route>
+      <Route path='/addItem'element={<AddItem></AddItem>}></Route>
       
-       
+      
       <Route path='/inventory/:id' element={<RequiredAuth><ItemDetail></ItemDetail></RequiredAuth>}  ></Route>
       <Route path='/inventoryItem' element={<InventoryItem></InventoryItem>}  ></Route>
       <Route path='/register' element={<Register></Register>}></Route>
