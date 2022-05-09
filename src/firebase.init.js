@@ -7,20 +7,20 @@ import {getAuth} from 'firebase/auth';
 // Your web app's Firebase configuration
 const firebaseConfig = {
     
-        apiKey: "AIzaSyDgGpaxpmvHkJ4eWhAH_0lX7xYUsOmZ6DQ",
-        authDomain: "fruits-store-house.firebaseapp.com",
-        projectId: "fruits-store-house",
-        storageBucket: "fruits-store-house.appspot.com",
-        messagingSenderId: "544401191617",
-        appId: "1:544401191617:web:a6cc707368d4c60886da40"
+        // apiKey: "AIzaSyDgGpaxpmvHkJ4eWhAH_0lX7xYUsOmZ6DQ",
+        // authDomain: "fruits-store-house.firebaseapp.com",
+        // projectId: "fruits-store-house",
+        // storageBucket: "fruits-store-house.appspot.com",
+        // messagingSenderId: "544401191617",
+        // appId: "1:544401191617:web:a6cc707368d4c60886da40"
       
     
-        // apiKey:process.env.REACT_APP_apiKey,
-        // authDomain:process.env.REACT_APP_authDomain,
-        // projectId:process.env.REACT_APP_projectId,
-        // storageBucket:process.env.REACT_APP_storageBucket,
-        // messagingSenderId:process.env.REACT_APP_messagingSenderId,
-        // appId:process.env.REACT_APP_appId,
+        apiKey:process.env.REACT_APP_apiKey,
+        authDomain:process.env.REACT_APP_authDomain,
+        projectId:process.env.REACT_APP_projectId,
+        storageBucket:process.env.REACT_APP_storageBucket,
+        messagingSenderId:process.env.REACT_APP_messagingSenderId,
+        appId:process.env.REACT_APP_appId,
       
 };
 
