@@ -17,7 +17,7 @@ import ManageInventory from './PagesOfWebsite/ManageInventory/ManageInventory';
 import AddItem from './PagesOfWebsite/AddItem/AddItem';
 import MyItem from './PagesOfWebsite/MyItem/MyItem';
 import Gallery from './PagesOfWebsite/Gallery/Gallery';
-import DeleteItem from './commonPages/DeleteItem/DeleteItem';
+
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
       <Route path='/contact'element={<Contact></Contact>}></Route>
       <Route path='/quality'element={<Quality></Quality>}></Route>
-      <Route path='/manageInventory'element={<ManageInventory></ManageInventory>}></Route>
+      <Route path='/manageInventory'element={<RequiredAuth><ManageInventory></ManageInventory></RequiredAuth>}></Route>
       <Route path='/addItem'element={<AddItem></AddItem>}></Route>
       
       <Route path='/myItem'element={<MyItem></MyItem>}></Route>

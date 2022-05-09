@@ -11,7 +11,7 @@ const ItemDetail = () => {
     const [reload,setReload]=useState(true)
     const{ _id,name,img,quantity,supplierName,description,price}=inventory;
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://vast-taiga-43887.herokuapp.com/inventory/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -27,7 +27,7 @@ const ItemDetail = () => {
         const quantity=parseInt(inventory.quantity)-1;
         const newQuantity=quantity;
 
-        fetch(`http://localhost:5000/inventory/${id}`, {
+        fetch(`https://vast-taiga-43887.herokuapp.com/inventory/${id}`, {
             method: 'PUT', 
             headers: {
                 'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const ItemDetail = () => {
     const handleRestock =(event)=>{
         event.preventDefault();
         const quantity=parseInt(inventory.quantity) + parseFloat(event.target.quantity.value);
-        fetch(`http://localhost:5000/inventory/${id}`,{
+        fetch(`https://vast-taiga-43887.herokuapp.com/inventory/${id}`,{
             method: 'PUT', 
             headers: {
                 'Content-Type': 'application/json',
@@ -71,6 +71,7 @@ const ItemDetail = () => {
 
     }
     const handleSold=()=>{
+  
         toast('sold out')
     }
 
