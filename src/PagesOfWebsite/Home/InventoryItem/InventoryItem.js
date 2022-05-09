@@ -33,7 +33,7 @@ const InventoryItem = () => {
         
       <div>
           {
-              loading?<p><Loading></Loading></p>:null
+              loading?<div><Loading></Loading></div>:null
           }
             <div id='inventoryItem' className='container' >
            
@@ -44,8 +44,10 @@ const InventoryItem = () => {
                  
                   {
                       items.slice(0,6).map(item => <SingleItem
-                          key={item._id}
-                          item={item}></SingleItem>)
+                      key={item._id}
+                      item={item}
+                         ></SingleItem>)
+                        
                   }
                    
               </div>

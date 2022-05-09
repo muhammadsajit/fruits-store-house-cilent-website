@@ -1,0 +1,16 @@
+.button-add{
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+}
+.item-container{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+   padding-bottom: 10px;
+   text-align: center;
+   position: relative;
+   margin-bottom: 100px;
+}
+.button-info{
+    margin-left: 10px;
+}

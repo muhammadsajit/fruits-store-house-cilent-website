@@ -17,6 +17,7 @@ import ManageInventory from './PagesOfWebsite/ManageInventory/ManageInventory';
 import AddItem from './PagesOfWebsite/AddItem/AddItem';
 import MyItem from './PagesOfWebsite/MyItem/MyItem';
 import Gallery from './PagesOfWebsite/Gallery/Gallery';
+import DeleteItem from './commonPages/DeleteItem/DeleteItem';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       
       <Route path='/myItem'element={<MyItem></MyItem>}></Route>
       <Route path='/gallery'element={<Gallery></Gallery>}></Route>
+
       
       
       <Route path='/inventory/:id' element={<RequiredAuth><ItemDetail></ItemDetail></RequiredAuth>}  ></Route>
