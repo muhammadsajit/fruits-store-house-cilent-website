@@ -7,3 +7,8 @@
     }
     
 } */
+.manageButton{
+    display: flex;
+    justify-content: center;
+    
+}

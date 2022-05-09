@@ -18,7 +18,7 @@ const AllItem = ({item}) => {
              <p><small>Quantity:{quantity}</small></p> 
             <p>SupplierName:{supplierName}</p>
             <button  className='btn btn-primary button-info'><span>Delete</span></button>
-            <button onClick={handleNavigate} className='btn btn-primary button-info'><span>Add Item</span></button>
+            <button onClick={handleNavigate} className='btn btn-primary button-info'><span>Add New Item</span></button>
         </div>
     );
 

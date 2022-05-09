@@ -50,7 +50,7 @@ const InventoryItem = () => {
                    
               </div>
           </div>
-         <div>  
+         <div className='manageButton'>  
          <button onClick={ navigateManageInventory} className="btn btn-link text-primary text-decoration-none " >Manage Inventories</button>
          </div>
          

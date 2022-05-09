@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './ItemDetail.css'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetail = () => {
     const { id } = useParams();
+    const navigate =useNavigate();
     const [inventory, setInventory] = useState({});
     const{ _id,name,img,quantity,supplierName,description,price}=inventory;
     useEffect(() => {
@@ -33,6 +34,9 @@ const ItemDetail = () => {
                  
             })
     }
+    const navigateManageInventory =()=>{
+        navigate('/manageInventory')
+    }
 
     return (
         <div className='card-container' >
@@ -56,6 +60,9 @@ const ItemDetail = () => {
         </div>
           </div>
    
+        </div>
+        <div className='manageButton'>
+        <button onClick={ navigateManageInventory} className="btn btn-link text-primary text-decoration-none  " >Manage Inventories</button>
         </div>
         </div>
          );
